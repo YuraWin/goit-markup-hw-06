@@ -434,5 +434,33 @@
         <p class="copyright">2020 | Developed by GoIT Students</p>
       </div>
     </footer>
+<!-- Фон модалки -->
+    <div class="backdrop">
+<!-- Модальное окно -->
+      <div class="modal">
+        <form class="js-speaker-form reg-form">
+          <b class="reg-form-title">Оставьте свои данные, мы Вам перезвоним</b>
+          <label for="user-name">Имя</label>
+          <input type="text" name="user-name" id="user-name">
+
+          <label for="user-tel">Телефон</label>
+          <input type="tel" name="user-tel" id="user-tel">
+
+          <label for="user-mail">Почта</label>
+          <input type="mail" name="user-mail" id="user-mail">
+          
+          <label for="user-comment">Комментарий</label>
+          <textarea name="user-comment" id="user-comment" cols="30" rows="10"></textarea>
+          
+         <div>
+          <input type="checkbox" id="user-agree">
+          <label for="user-agree">Согласен с рассылкой и принимаю <a href="#">Условия договора</a> </label>
+         </div>
+
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
