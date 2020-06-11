@@ -33,6 +33,7 @@
   line-height: 1.87;
   letter-spacing: 0.06em;
   text-align: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .section-title {
@@ -224,30 +225,29 @@
 .section .clients-img:focus {
   background-color: var(--accent-color);
 } */
-.backdrop{
+.backdrop {
   position: fixed;
-  left:0px;
+  left: 0px;
   top: 0px;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.backdrop.is-hidden{
+.backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
- 
 }
-.backdrop.is-hidden .modal{
-  transform: translate(-50%,-50%) scalex(0);
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scalex(0);
 }
-.modal{
+.modal {
   position: absolute;
   top: 50%;
   left: 50%;
-
-
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scalex(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   width: 528px;
   height: 581px;
@@ -255,27 +255,72 @@
 
   font-family: inherit;
 
-  background: #FFFFFF;
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+  background: #ffffff;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-
 }
-.reg-form{
+.regform {
   display: flex;
   flex-direction: column;
 }
-.reg-form-title{
+.regform-title {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.01em;
   color: var(--second-text-color);
+  margin-bottom: 30px;
 }
-.reg-form label{
+.regform-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.regform label {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: 0.01em;
-  color: var(--second-text-color);
-  margin-bottom: 28px;
+  color: var(--primary-text-color);
+  margin-bottom: 2px;
 }
+.regform input,
+.regform textarea {
+  padding: 12px 18px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.regform textarea {
+  width: 448px;
+  height: 120px;
+  resize: none;
+}
+.regform-agree {
+  margin-bottom: 20px;
+}
+.regform-agree a {
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+.regform-agree label {
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.regform-submit-center {
+  display: inline-flex;
+  justify-content: center;
+}
+.regform-submit {
+  width: 200px;
+  height: 50px;
+  border: 1px;
+  cursor: pointer;
+}
+
+/* 
+  style="
+              margin-bottom: 28px;
+             
+            " */
