@@ -438,61 +438,41 @@
     <div class="backdrop is-hidden" data-backdrop>
       <!-- Модальное окно -->
       <div class="modal">
+        <b class="regform-title">Оставьте свои данные, мы Вам перезвоним</b>
         <form class="js-speaker-form regform">
-          <b class="regform-title">Оставьте свои данные, мы Вам перезвоним</b>
-          <div class="regform-field">
-            <label for="user-name">Имя</label>
+          <label class="regform-field"
+            >Имя
             <input type="text" name="user-name" id="user-name" />
-          </div>
+          </label>
 
-          <div class="regform-field">
-            <label for="user-tel">Телефон</label>
+          <label class="regform-field"
+            >Телефон
             <input type="tel" name="user-tel" id="user-tel" />
-          </div>
+          </label>
 
-          <div class="regform-field">
-            <label for="user-mail">Почта</label>
+          <label class="regform-field"
+            >Почта
             <input type="mail" name="user-mail" id="user-mail" />
-          </div>
+          </label>
 
-          <div class="regform-field">
-            <label for="user-comment">Комментарий</label>
+          <label class="regform-field"
+            >Комментарий
             <textarea name="user-comment" id="user-comment" cols="30" rows="10"></textarea>
-          </div>
+          </label>
 
-          <div class="regform-agree">
+          <label class="regform-agree" for="user-agree">
             <input type="checkbox" id="user-agree" />
-            <label for="user-agree"
-              >Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a>
-            </label>
-          </div>
+            Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a>
+          </label>
 
           <div class="regform-submit-center">
-            <button class="regform-submit button" type="submit" data-close-modal>Отправить</button>
+            <button class="regform-submit button" type="submit">Отправить</button>
           </div>
         </form>
+        <div class="regform-clothe" data-close-modal></div>
       </div>
     </div>
+    <script src="./js/testinput.js"></script>
     <script src="./js/modal.js"></script>
-    <script>
-      const refs = {
-        openModalBtn: document.querySelector('[data-open-modal]'),
-        closeModalBtn: document.querySelector('[data-close-modal]'),
-        backdrop: document.querySelector('[data-backdrop]'),
-      };
-
-      refs.openModalBtn.addEventListener('click', toggleModal);
-      refs.closeModalBtn.addEventListener('click', toggleModal);
-
-      refs.backdrop.addEventListener('click', logBackdropClick);
-
-      function toggleModal() {
-        refs.backdrop.classList.toggle('is-hidden');
-      }
-
-      function logBackdropClick() {
-        console.log('Это клик в бекдроп');
-      }
-    </script>
   </body>
 </html>

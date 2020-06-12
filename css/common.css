@@ -311,8 +311,8 @@ a {
 .send-button {
   display: flex;
 }
-.send-button .item {
-}
+/* .send-button .item {
+} */
 .send-button .item + .item {
   margin-left: 12px;
 }

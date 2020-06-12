@@ -265,6 +265,8 @@
   flex-direction: column;
 }
 .regform-title {
+  display: block;
+  text-align: center;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.2;
@@ -276,14 +278,12 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
-}
-.regform label {
+
   font-size: 14px;
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: 0.01em;
   color: var(--primary-text-color);
-  margin-bottom: 2px;
 }
 .regform input,
 .regform textarea {
@@ -296,9 +296,10 @@
   height: 120px;
   resize: none;
 }
-.regform-agree {
-  margin-bottom: 20px;
-}
+/* .regform-agree {
+  margin-bottom: 20px; 
+}*/
+
 .regform-agree a {
   text-decoration: underline;
   color: var(--accent-color);
@@ -318,9 +319,22 @@
   border: 1px;
   cursor: pointer;
 }
+.regform-clothe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(+50%, -50%);
 
-/* 
-  style="
-              margin-bottom: 28px;
-             
-            " */
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  background-image: url(../images/close-black.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: white;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+}
