@@ -440,24 +440,39 @@
       <div class="modal">
         <b class="regform-title">Оставьте свои данные, мы Вам перезвоним</b>
         <form class="js-speaker-form regform">
-          <label class="regform-field"
-            >Имя
-            <input type="text" name="user-name" id="user-name" />
+          <label class="regform-field">
+            <input class="regform-input" type="text" name="user-name" placeholder=" " />
+            <span class="regform-label">Имя</span>
+            <svg class="regform-icon">
+              <use use href="./images/sprite.svg#icon-person-black"></use>
+            </svg>
           </label>
 
-          <label class="regform-field"
-            >Телефон
-            <input type="tel" name="user-tel" id="user-tel" />
+          <label class="regform-field">
+            <input class="regform-input" type="tel" name="user-tel" placeholder=" " />
+            <span class="regform-label">Телефон</span>
+            <svg class="regform-icon">
+              <use use href="./images/sprite.svg#icon-phone-black"></use>
+            </svg>
           </label>
 
-          <label class="regform-field"
-            >Почта
-            <input type="mail" name="user-mail" id="user-mail" />
+          <label class="regform-field">
+            <input class="regform-input" type="mail" name="user-mail" placeholder=" " />
+            <span class="regform-label">Почта</span>
+            <svg class="regform-icon">
+              <use use href="./images/sprite.svg#icon-email-black"></use>
+            </svg>
           </label>
 
-          <label class="regform-field"
-            >Комментарий
-            <textarea name="user-comment" id="user-comment" cols="30" rows="10"></textarea>
+          <label class="regform-field">
+            <textarea
+              class="regform-input"
+              name="user-comment"
+              cols="30"
+              rows="10"
+              placeholder=" "
+            ></textarea>
+            <span class="regform-label comment">Комментарий</span>
           </label>
 
           <label class="regform-agree" for="user-agree">
@@ -469,7 +484,7 @@
             <button class="regform-submit button" type="submit">Отправить</button>
           </div>
         </form>
-        <div class="regform-clothe" data-close-modal></div>
+        <button class="regform-close" data-close-modal></button>
       </div>
     </div>
     <script src="./js/testinput.js"></script>
