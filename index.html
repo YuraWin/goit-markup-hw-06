@@ -460,11 +460,11 @@
             <input class="regform-input" type="mail" name="user-mail" placeholder=" " />
             <span class="regform-label">Почта</span>
             <svg class="regform-icon">
-              <use use href="./images/sprite.svg#icon-email-black"></use>
+              <use href="./images/sprite.svg#icon-email-black"></use>
             </svg>
           </label>
 
-          <label class="regform-field">
+          <label class="regform-field comment">
             <textarea
               class="regform-input"
               name="user-comment"
@@ -475,14 +475,13 @@
             <span class="regform-label comment">Комментарий</span>
           </label>
 
-          <label class="regform-agree" for="user-agree">
-            <input type="checkbox" id="user-agree" />
-            Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a>
+          <label class="regform-checkbox">
+            <input class="input-checkbox" type="checkbox" name="checkbox" />
+            <span class="label-checkbox">
+              Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a>
+            </span>
           </label>
-
-          <div class="regform-submit-center">
-            <button class="regform-submit button" type="submit">Отправить</button>
-          </div>
+          <button class="regform-submit button" type="submit">Отправить</button>
         </form>
         <button class="regform-close" data-close-modal></button>
       </div>
