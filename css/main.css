@@ -297,6 +297,7 @@
 }
 .regform-input:focus {
   border: 1px solid var(--accent-color);
+  outline: 0px;
 }
 .regform-input:focus + .regform-label,
 .regform-input:not(:placeholder-shown) + .regform-label {
