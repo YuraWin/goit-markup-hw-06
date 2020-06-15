@@ -299,10 +299,14 @@
   border: 1px solid var(--accent-color);
   outline: 0px;
 }
+.regform-input:focus + .regform-label {
+  color: var(--accent-color);
+}
 .regform-input:focus + .regform-label,
 .regform-input:not(:placeholder-shown) + .regform-label {
   transform: translate(-26px, calc(-50% - 32px));
 }
+
 .regform-label {
   position: absolute;
   top: 50%;
@@ -338,7 +342,7 @@
 .regform-label.comment {
   top: 12px;
   left: 16px;
-  transform: translateY(0);
+  /* transform: translateY(0); */
 }
 .regform-input:focus + .regform-label.comment,
 .regform-input:not(:placeholder-shown) + .regform-label.comment {
