@@ -410,6 +410,7 @@
   height: 30px;
   border-radius: 50%;
   border: 1px solid transparent;
+  outline: transparent;
 
   cursor: pointer;
 
